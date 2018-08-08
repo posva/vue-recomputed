@@ -1,7 +1,7 @@
 {
   "name": "vue-recomputed",
   "version": "0.0.0",
-  "description": "Some awesome description",
+  "description": "Recomputable computed properties in Vue",
   "sideEffects": false,
   "main": "dist/vue-recomputed.cjs.js",
   "module": "dist/vue-recomputed.es.js",
