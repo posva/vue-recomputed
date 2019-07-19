@@ -12,7 +12,7 @@
     "email": "posva13@gmail.com"
   },
   "scripts": {
-    "lint": "eslint --color --ext=js,html src test",
+    "lint": "eslint --color --ext=js,html src",
     "unit": "jest",
     "dev": "npm run unit -- --watchAll",
     "test": "npm run lint && npm run unit",
@@ -27,15 +27,15 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "@vue/test-utils": "^1.0.0-beta.24",
-    "babel-jest": "^23.4.2",
-    "babel-preset-env": "^1.7.0",
-    "codecov": "^3.0.4",
-    "eslint": "^5.3.0",
-    "eslint-config-posva": "^2.0.0",
-    "jest": "^23.4.2",
-    "vue": "^2.5.17",
-    "vue-template-compiler": "^2.5.17"
+    "@babel/core": "^7.5.5",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-jest": "^24.8.0",
+    "codecov": "^3.5.0",
+    "eslint": "^6.0.1",
+    "eslint-config-posva": "^3.0.1",
+    "jest": "^24.8.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
   },
   "repository": {
     "type": "git",
