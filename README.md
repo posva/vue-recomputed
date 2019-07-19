@@ -12,7 +12,7 @@ npm install vue-recomputed
 
 ## Usage
 
-This is a silly example to showcase the API. **Never do this kind of thigs**:
+This is a silly example to showcase the API. **Never do this kind of things**:
 
 ```js
 export default {
