@@ -1,16 +1,13 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import Vue from 'vue'
 import plugin from './index'
 
-const localVue = createLocalVue()
-
-localVue.use(plugin)
+Vue.use(plugin)
 
 describe('VueRecomputed', () => {
   it('adds a computed property', () => {
     let i = 0
-    const wrapper = shallowMount({
+    const vm = new Vue({
       render: h => h(),
-
       recomputed: {
         foo () {
           return i++
@@ -18,6 +15,9 @@ describe('VueRecomputed', () => {
       },
     })
 
-    expect(wrapper.vm.foo).toBe(0)
+    expect(vm.foo).toBe(0)
+    expect(vm.foo).toBe(0)
+    vm.$recompute('foo')
+    expect(vm.foo).toBe(1)
   })
 })
