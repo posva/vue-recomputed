@@ -1,6 +1,6 @@
 export default function install (Vue) {
   let id = 0
-  let data = {}
+  const data = {}
 
   Vue.mixin({
     beforeCreate () {
