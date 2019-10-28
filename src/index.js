@@ -13,7 +13,7 @@ export default function install (Vue) {
         Object.keys(this.$options.recomputed).reduce((r, key) => {
           r[key] = 0
           return r
-        }, {})
+        }, {}),
       )
       this.$options.computed = this.$options.computed || {}
       Object.keys(this.$options.recomputed).forEach(key => {
