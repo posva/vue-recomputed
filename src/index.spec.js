@@ -16,8 +16,36 @@ describe('VueRecomputed', () => {
     })
 
     expect(vm.foo).toBe(0)
-    expect(vm.foo).toBe(0)
     vm.$recompute('foo')
     expect(vm.foo).toBe(1)
+  })
+
+  it('check computed and recomputed', () => {
+    let i = 0
+    const vm = new Vue({
+      computed: {
+        count () {
+          return i++
+        },
+      },
+      render: h => h(),
+      recomputed: {
+        rCount () {
+          return i++
+        },
+      },
+    })
+
+    // recomputed prop is initialized to 0
+    expect(vm.rCount).toBe(0)
+
+    // computed prop is called for first time
+    expect(vm.count).toBe(1)
+
+    // recomputed prop
+    vm.$recompute('rCount')
+
+    expect(vm.rCount).toBe(2)
+    expect(vm.count).toBe(1)
   })
 })
